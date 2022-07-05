@@ -4,13 +4,15 @@ const request = require("request");
 var decode = require("html-entities-decoder");
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 app.set('view-engine', 'ejs');
+app.use(express.urlencoded({extended: true}));
 
-const randomNum = Math.floor(Math.random() * 3);
+
 
 app.get("/", function(req, res){
     
+
     
 
     var url = "https://opentdb.com/api.php?amount=1";
@@ -32,7 +34,9 @@ app.get("/", function(req, res){
             allAnswers[i] = wrongAnswers[i];
         }
 
-        
+        var numAnswers = wrongAnswers.length == 1 ? 2 : 4;
+
+        const randomNum = Math.floor(Math.random() * numAnswers);
 
         allAnswers.splice(randomNum, 0, correctAnswer);
         
@@ -50,12 +54,22 @@ app.get("/", function(req, res){
             correctAnswerIndex: randomNum
 
         });
+        
+
+
+
     });
+ 
 
-    
+});
 
+
+app.post("/redirect", function(req, res){
+    res.redirect("/");
 });
 
 app.listen(3000, function(req, res){
     console.log("Port 3000 started");
 });
+
+

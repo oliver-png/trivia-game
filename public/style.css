@@ -18,7 +18,6 @@ h1{
 
 .test {
     font-family:'Roboto Mono', monospace;
-    ;
     font-size: 2rem;
     text-align: center;
     border: 2px solid #4CACBC;
@@ -36,7 +35,7 @@ h1{
     font-family:'Roboto Mono', monospace;
     font-weight: 200;
     width: 70%;
-    margin: 0 auto;
+    margin: 0 auto !important;
     padding-left: 15px !important;
     padding-top: 20px !important;
 }
@@ -51,6 +50,21 @@ h1{
     display:block;
     padding: 10px;
     margin: 10px;
+}
+
+.nextButton {
+    text-align: center;
+    float: right;
+    margin-right: 15%;
+    font-weight: bold;
+}
+
+.correct{
+    background-color: #5FD068 !important;
+}
+
+.incorrect{
+    background-color: #F24C4C !important;
 }
 
 /* F6E3C5 */
