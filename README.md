@@ -1,8 +1,10 @@
 # trivia-game
-Single-page trivia application with questions from several different categories.
+<ul>
+  <li>Single-page trivia application with questions from several different categories.</li>
+  <li>Node.js and Express.js used for backend, with EJS for templating and jQuery for scripts.</li>
+  <li>Questions are retrieved in JSON format from Open Trivia Databse.</li>
+</ul>
 
-Node.js and Express.js used for backend, with EJS for templating and jQuery for scripts.
-Questions are retrieved in JSON format from Open Trivia Databse.
 
 <img width="958" alt="tg1" src="https://user-images.githubusercontent.com/68671581/177435965-ca244f34-9bfd-4f72-b445-cac066d552c9.png">
 
