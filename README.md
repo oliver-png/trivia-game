@@ -2,7 +2,7 @@
 <ul>
   <li>Single-page trivia application with questions from several different categories.</li>
   <li>Node.js and Express.js used for backend, with EJS for templating and jQuery for scripts.</li>
-  <li>Questions are retrieved in JSON format from Open Trivia Databse.</li>
+  <li>Questions retrieved in JSON format from Open Trivia Databse.</li>
 </ul>
 
 
