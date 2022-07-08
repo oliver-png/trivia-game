@@ -8,14 +8,17 @@ app.use(express.static(__dirname + "/public"));
 app.set('view-engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 
+var token = "";
 
+request("https://opentdb.com/api_token.php?command=request", function(error, response, body){
+    let data = JSON.parse(body);
+    token = data.token;
+});
 
 app.get("/", function(req, res){
     
 
-    
-
-    var url = "https://opentdb.com/api.php?amount=1";
+    var url = "https://opentdb.com/api.php?amount=1&token=" + token;
     request(url, function(error, response, body){
         let data = JSON.parse(body);
         let question = decode(data.results[0].question);
@@ -55,12 +58,8 @@ app.get("/", function(req, res){
 
         });
         
-
-
-
     });
  
-
 });
 
 
